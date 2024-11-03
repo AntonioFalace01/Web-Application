@@ -1,0 +1,33 @@
+header{
+    background-color: midnightblue;
+
+}
+
+footer{
+    background-color: midnightblue;
+}
+
+button{
+    background-color:midnightblue;
+    border-width:0;
+    border-radius: 5px;
+
+}
+#iscriviButton, #annulla{
+    background-color:midnightblue;
+    border-width:0;
+    border-radius: 5px;
+}
+
+#iscriviButton:hover,#annulla:hover{
+    background-color: navy;
+}
+
+button:hover{
+    background-color: navy;
+
+}
+li:hover{
+    text-decoration: underline;
+    color: black;
+}

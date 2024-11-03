@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simula Mercato</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+
+    <script src="compraGiocatore.js" defer></script>
+    <script src="vendiGiocatore.js" defer></script>
+
+    <link rel="stylesheet" href="inter.css">
+</head>
+<body>
+<header class=" p-3 mb-4 text-black">
+
+    <div class="container">
+        <h1 class="text-center">FC INTERNAZIONALE</h1>
+
+        <nav class="text-center text-white-50">
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link text-black" href="home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-black" href="tabella.html">Simula mercato</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-black" href="form.html">Iscriviti</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main   class="container">
+    <div class="card mb-5">
+        <div class="card-body">
+            <h5 class="card-title">Gioca con noi!</h5>
+            <p class="card-text"> Gioca e aiuta i neroazzurri a ideare nuovi colpi nel mercato, potrai decidere quali sono i giocatori da cedere e quali invece acquistare, come?
+            Semplicemente inserendo il nome di chi deve essere il nuovo talento neroazzurro, ed eliminando il calciatore selezionato</p>
+        </div>
+    </div>
+
+
+    <section class="mb-5">
+        <caption>ROSA</caption>
+        <table class="table table-striped table-bordered" id="rosa">
+
+            <thead class="table-dark">
+            <tr>
+                <th>Nome</th>
+                <th>Squadra attuale</th>
+                <th>Prezzo</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Lautaro Martinez</td>
+                <td>Inter</td>
+                <td>100M</td>
+            </tr>
+
+            <tr>
+                <td>Alessandro Bastoni</td>
+                <td>Inter</td>
+                <td>80M</td>
+            </tr>
+            <tr>
+                <td>Yann Sommer</td>
+                <td>Inter</td>
+                <td>4M</td> </tr>
+            <tr>
+                <td>Josip Martinez</td>
+                <td>Inter</td>
+                <td>10M</td></tr>
+            <tr>
+                <td>Denzel Dumfries</td>
+                <td>Inter</td>
+                <td>40M</td> </tr>
+            <tr>
+                <td>Davide Frattesi</td>
+                <td>Inter</td>
+                <td>50M</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <div class="text-end mb-3">
+        <button id="compraGiocatoreButton" >
+            Acquista Giocatore
+        </button>
+
+        <button id="removeGiocatoreButton">
+            Vendi Giocatore
+        </button>
+    </div>
+
+    <div id="Giocatore" style="display: none; margin-top: 20px;">
+        <h3>Acquista Giocatore</h3>
+        <form id="nuovoGiocatore">
+            <div class="mb-3">
+                <label for="nomeGiocatore" class="form-label">Nome e cognome</label>
+                <input type="text" id="nomeGiocatore" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="squadra" class="form-label">Squadra</label>
+                <input type="text" id="squadra" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="prezzoGiocatore" class="form-label">Prezzo Giocatore</label>
+                <input type="text" id="prezzoGiocatore" class="form-control" required>
+            </div>
+            <button type="submit">Completa Acquisto!</button>
+        </form>
+    </div>
+
+    <div id="vendiGiocatore" style="display: none; margin-top: 10px;">
+        <h3>Vendi giocatori</h3>
+        <form id="vendi" onsubmit="vendiGiocatoreNome(event)">
+            <label for="nomeGiocatore1">Quale giocatore vuoi vendere?</label>
+            <input type="text" id="nomeGiocatore1"  required>
+            <button type="submit" class="btn btn-danger btn-sm">Vendi</button>
+        </form>
+    </div>
+
+</main>
+<footer class=" text-center p-3 mt-4 text-black">
+    <p>FC INTERNAZIONALE - All Rights Reserved</p>
+</footer>
+</body>
+</html>
+
+
+
+
+</body>
+</html>
